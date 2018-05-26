@@ -1,0 +1,363 @@
+@charset "UTF-8";
+@font-face {
+  font-family: iconfont;
+  src: url(../fonts/iconfont.eot?t=1503327386217);
+  src: url(../fonts/iconfont.eot?t=1503327386217#iefix) format("embedded-opentype"), url(../fonts/iconfont.woff?t=1503327386217) format("woff"), url(../fonts/iconfont.ttf?t=1503327386217) format("truetype"), url(../fonts/iconfont.svg?t=1503327386217#iconfont) format("svg");
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  /* min-width:770px; */
+}
+
+/* 导航的收缩图标设计 */
+
+.nav-btn {
+  font-size: 35px;
+  top: -18px;
+}
+
+.nav-btn>i {
+  display: block;
+}
+
+.icon-menu {
+  color: #fff;
+}
+
+.icon-menu:before {
+  content: "\e6c1";
+}
+
+.iconfont {
+  font-family: iconfont !important;
+  font-size: inherit;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 导航的背景图片设计 */
+
+.page__header {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("../img/06.jpeg");
+  background: center no-repeat;
+  background-size: cover;
+}
+
+.page__header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(64, 84, 90, 0.6);
+}
+
+/* 导航的上内距 */
+
+.navpadding {
+  padding-top: 35px;
+}
+
+/* 导航的样式 */
+
+.top>a {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 2em;
+  color: #fff !important;
+}
+
+.top>li>a {
+  color: #fff !important;
+}
+
+.top li>a:hover {
+  background-color: lightblue;
+}
+
+/* 最上面的标题 */
+
+.top_title>h1 {
+  color: white;
+}
+
+.top_title .top_hr {
+  margin: 20px auto;
+  height: 2px;
+  width: 160px;
+  border: 0;
+  background: #19abd6;
+  /* color: #19abd6; */
+}
+
+.top_title>p {
+  font-size: 14px;
+  color: #fff;
+}
+
+.top_title {
+  position: absolute;
+  /* padding-left: 10%; */
+  top: calc(43% + 35px);
+  /* transform: translateY(43%); */
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.main_article {
+  padding-top: 5%;
+}
+
+/* 搜索框 */
+
+.wrapbar>button {
+  height: 42px;
+  width: 42px;
+  background: none;
+  border: none;
+  margin-left: -45px;
+}
+
+.bar form {
+  height: 45px;
+}
+
+.bar input {
+  width: 250px;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 42px;
+  border: 2px solid #324b4e;
+  /* background: #f9f0da; */
+  transition: 0.3s linear;
+}
+
+.bar input:focus {
+  width: 300px;
+  outline: 0;
+}
+
+/* 简介 */
+
+.introduce .line {
+  position: relative;
+  color: #242f35;
+  font-size: 16px;
+  padding-left: 16px;
+  margin: 30px auto 20px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+}
+
+.introduce .line::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #19abd6;
+  background: linear-gradient(to bottom, #19abd6 35%, #3ac0e8 100%) left center no-repeat;
+  background-size: 100%;
+}
+
+.introduce p {
+  margin-left: 15px;
+  margin-top: -5px;
+  width: 80%;
+  letter-spacing: 1px;
+  line-height: 22px;
+  color: gray;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* 分类 */
+
+.sort .line {
+  position: relative;
+  color: #242f35;
+  font-size: 16px;
+  padding-left: 16px;
+  margin: 30px auto 20px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+}
+
+.sort .line::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #19abd6;
+  background-size: 100%;
+}
+
+/* 标签 */
+
+.tag .line {
+  position: relative;
+  color: #242f35;
+  font-size: 16px;
+  padding-left: 16px;
+  margin: 30px auto 20px;
+  font-weight: 400;
+  height: 20px;
+  line-height: 20px;
+}
+
+.tag .line::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 4px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: #19abd6;
+  background-size: 100%;
+}
+
+.btn_style {
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 20px;
+  margin: 4px;
+}
+
+.btn_style:hover {
+  border-radius: 20px;
+  border-color: #1F9ED1;
+  background-color: #fff;
+  color: #1F9ED1;
+}
+
+/* 主内容区 */
+
+/* 日期 */
+
+.main_date {
+  color: gray;
+}
+
+/* 内容的链接 */
+
+.media-body a {
+  text-decoration: none;
+  color: black;
+}
+
+.media-body a:hover {
+  color: gray;
+}
+
+/* 字符间距 */
+
+.letterspacing {
+  width: 90%;
+  letter-spacing: 1px;
+  line-height: 22px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* 分割线 */
+
+.split {
+  margin: 10px auto;
+  border-color: #E6E6E6;
+}
+
+/* 标签tag */
+
+.tags {
+  padding-top: 5px;
+}
+
+.tags a {
+  color: #7b7e82;
+}
+
+/* 内容区按钮位置 */
+
+.btn_content_style {
+  font-size: 10px;
+  font-weight: 500;
+  border-radius: 20px;
+  margin: 4px;
+  color: #7b7e82;
+  border: 1px solid #324b4e;
+}
+
+.btn_content_style:hover {
+  border-radius: 20px;
+  /* border-color: black; */
+  border-color: #1F9ED1;
+  background-color: #fff;
+  /* color: black; */
+  color: #1F9ED1;
+}
+
+/* 分页 */
+
+.paging {
+  position: relative;
+  height: 100px;
+}
+
+.paging nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 返回顶部 */
+
+#back-to-top {
+  position: fixed;
+  bottom: 18px;
+  right: 12px;
+}
+
+#back-to-top a {
+  text-align: center;
+  text-decoration: none;
+  /* display: block; */
+}
+
+.fa-chevron-up {
+  color: white;
+}
+
+#back-to-top a span {
+  display: block;
+  background-color: #19abd6;
+  border: 1px solid #19abd6;
+  border-radius: 120px;
+  padding: 12px;
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+}
+
+/* 底部 */
+
+footer {
+  line-height: 25px;
+  padding-bottom: 10px;
+}
