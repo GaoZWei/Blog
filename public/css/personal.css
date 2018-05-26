@@ -1,0 +1,94 @@
+/* 关于我 */
+
+.about_myself {
+    margin-top: 5%;
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+.myself {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #F4F5F6;
+    /* border: 1px solid black; */
+    border-left: #DDDDDD 5px solid;
+    padding-left: 10px;
+    letter-spacing: 1px;
+}
+
+.myself>p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.specific {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.specific p,
+.contact p {
+    line-height: 22px;
+    color: gray;
+}
+
+/* 建站初衷 */
+
+.web_aim {
+    margin-left: 2%;
+    margin-right: 5%;
+}
+
+/* 评论区 */
+
+.comment {
+    margin-top: 3%;
+    margin-left: 2%;
+}
+
+.comment>.content {
+    margin: 1.25em 0;
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+.content_icon {
+    display: inline-block;
+    /* width: 5%; */
+}
+
+.text_areastyle {
+    display: inline-block;
+    margin-left: 3%;
+    overflow: hidden;
+    padding: 0.75em;
+    width: 80%;
+    min-height: 5em;
+    max-height: 15em;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.875em;
+    background-color: #f6f6f6;
+    transition: all 0.25s ease;
+}
+
+.text_areastyle:focus {
+    outline: 0;
+}
+
+.comment_content {
+    margin: 1.25em 0;
+    padding: 1em 0;
+    font-size: 1em;
+}
+
+.comment_contentp>p {
+    width: 87%;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.875em;
+    background-color: #f6f6f6;
+    color: black;
+}

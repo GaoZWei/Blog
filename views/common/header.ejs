@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>GZW 's Blog</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/color.css"> -->
+    <link href="https://cdn.shaozb.xin/Blog/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- 自动获取屏幕宽度 -->
+<script>
+    setTimeout(function () {
+        document.getElementsByTagName('body')[0].style.height = window.innerHeight + 'px';
+    }, 20);
+</script>
+<header class="page__header" style="background-image:url('./img/06.jpeg')">
+    <nav class="navbar navpadding">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display 在这: navbar-inverse navbar-fixed-top-->
+            <div class="navbar-header top">
+                <button type="button" class="navbar-toggle collapsed nav-btn" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                        aria-expanded="false">
+                    <i class="iconfont icon-menu"></i>
+                    <span class="sr-only">Blog nav</span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand test" href="index.html">Gzw 的博客</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right top">
+                    <li>
+                        <a href="/">主页</a>
+                    </li>
+                    <li>
+                        <a href="/front_list">前端知识</a>
+                    </li>
+                    <li>
+                        <a href="/problem_list">问题解决</a>
+                    </li>
+                    <li>
+                        <a href="/hobby">其他爱好</a>
+                    </li>
+                    <li>
+                        <a href="/personal">关于</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="top_title">
+        <h1>GZW 'S BLOG
+        </h1>
+        <hr class="top_hr">
+        <p>日常学习与兴趣交流</p>
+    </div>
+
+</header>

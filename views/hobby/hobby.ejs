@@ -1,0 +1,98 @@
+<% include ../common/header.ejs%>
+<link rel="stylesheet" type="text/css" href="./css/hobby.css">
+<div class="container main_article">
+    <div class="row">
+        <div class="col-md-8 col-sm-12">
+            <div class="hobby_title">
+                <h2>在这里记录自己一些的小爱好</h2>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-md-6">
+                    <video width="320" height="240" controls="controls">
+                        <source src="media/video1.mp4" type="video/mp4" />
+                        <source src="movie.ogg" type="video/ogg" />
+                        <source src="movie.webm" type="video/webm" />
+                        <object data="movie.mp4" width="320" height="240">
+                            <embed src="movie.swf" width="320" height="240" />
+                        </object>
+                    </video>
+                    <div class="video_description">斑马前奏</div>
+                </div>
+
+                <div class="col-md-6">
+                    <video width="320" height="240" controls="controls">
+                        <source src="media/video1.mp4" type="video/mp4" />
+                        <source src="movie.ogg" type="video/ogg" />
+                        <source src="movie.webm" type="video/webm" />
+                        <object data="movie.mp4" width="320" height="240">
+                            <embed src="movie.swf" width="320" height="240" />
+                        </object>
+                    </video>
+                    <div class="video_description">斑马前奏</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- col-md-8 -->
+        <!-- 侧栏 -->
+        <div class="col-md-4">
+            <!-- 搜索框 -->
+            <div class="search bar">
+                <form>
+                    <div class="wrapbar">
+                        <input type="text" placeholder="请输入您要搜索的内容...">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <!-- 个人简介 -->
+            <div class="introduce">
+                <h3 class="line">
+                    <b>简介:</b>
+                </h3>
+                <p>本博客分享自己所了解的前端知识,以及一些常见的问题的解决方法,并希望能够与大家积极交流,彼此之间不断进步.</p>
+            </div>
+            <!-- 分类 -->
+            <div class="sort">
+                <h3 class="line">
+                    <b>文章分类</b>
+                </h3>
+                <div class="list-group">
+                    <!-- <a href="#" class="list-group-item active"> -->
+                    <a href="/front_list" class="list-group-item">
+                        前端知识
+                        <span class="badge">1</span>
+                    </a>
+                    <a href="/problem_list" class="list-group-item">问题解决
+                        <span class="badge">1</span>
+                    </a>
+                    <a href="#" class="list-group-item">文章转发
+                        <span class="badge"></span>
+                    </a>
+                    <a href="#" class="list-group-item">常用组件
+                        <span class="badge"></span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 标签 -->
+            <div class="tag">
+                <h3 class="line">
+                    <b>标签</b>
+                </h3>
+                <a class="btn btn-default btn_style" href="#" role="button">HTML</a>
+                <a class="btn btn-default btn_style" href="#" role="button">CSS</a>
+                <a class="btn btn-default btn_style" href="#" role="button">JavaScript</a>
+                <a class="btn btn-default btn_style" href="#" role="button">组件</a>
+                <a class="btn btn-default btn_style" href="#" role="button">总结</a>
+            </div>
+        </div>
+        <!-- col-md-4 -->
+    </div>
+    <!-- row-->
+</div>
+<% include ../common/footer.ejs%>

@@ -1,0 +1,40 @@
+/* .left_content {
+    background-color: cornsilk
+} */
+
+.left_content h1 {
+    text-align: center;
+    /* height: 50px; */
+    margin-bottom: 1em;
+}
+
+.main_article p {
+    margin-top: 20px;
+}
+
+/* span的样式 */
+
+.explain {
+    margin-left: 20px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* 头部时间和阅读量 */
+
+.top_description {
+    color: gray;
+    display: inline;
+    text-align: center;
+    position: relative;
+}
+
+.write_date {
+    margin-left: 18.5%;
+}
+
+.read_number {
+    /* margin-left: 10%; */
+    position: absolute;
+    right: -85%;
+}
