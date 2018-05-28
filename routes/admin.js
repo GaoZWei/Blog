@@ -5,11 +5,9 @@ var id;
 
 /* get blogs. */
 router.get('/', function (req, res, next) {
-    blogDao.getBlogs(req.query, function (error, results) {
-        console.log(Math.floor(results.length / 10) + 1);
-        console.log(results)
-    });
-    res.send('get blogs success');
+    blogDao.getBlogs(req.query)
+        .then(console.log)
+        .then(res.send('get blogs success'));
 });
 
 /* get blog. */

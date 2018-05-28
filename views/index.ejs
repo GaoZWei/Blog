@@ -6,6 +6,7 @@
         <div class="col-md-8 col-sm-12">
             <!-- 媒体对象列表 -->
             <ul class="media-list">
+                <% for(var i = 0;i < articles.length;i++){ %>
                 <li class="media">
                     <div class="media-left">
                         <a href="#">
@@ -13,24 +14,19 @@
                         </a>
                     </div>
                     <div class="media-body">
-                        <a href="/front_content">
-                            <h3 class="media-heading  media-heading">CSS加载方式link与@import的区别</h3>
-                            <h5 class="main_date">·&nbsp; 2018年05月22日</h5>
-                            <p class="letterspacing"> 我们都知道,link与@import都是加载css文件,但是还是存在细小的差别.
-                                1.老祖宗的不同
-                                link属于XHTML的标签
-                                @import只是css提供的一种方式
-                                link标签还可以加载css之外的东西,例如定义Rss,定义rel连接属性
-                                @import只能加载css...</p>
+                        <a href="/article/<%= articles[i].id %>">
+                            <h3 class="media-heading  media-heading"><%= articles[i].title %></h3>
+                            <h5 class="main_date">·&nbsp;&nbsp;<%= articles[i].updateTime %></h5>
+                            <p class="letterspacing"> <%= articles[i].description %></p>
                         </a>
                     </div>
                     <hr class="split">
                     <div>
                         <div class="col-md-9 tags">
+                            <% for(var j = 0;j < articles[i].tags.length;j++){ %>
                             <a href="#">
-                                <i class="fa fa-tags" aria-hidden="true"></i>&nbsp;HTML</a>&nbsp;
-                            <a href="#">
-                                <i class="fa fa-tags" aria-hidden="true"></i>&nbsp;CSS</a>
+                                <i class="fa fa-tags" aria-hidden="true">&nbsp;</i><%= articles[i].tags[j] %></a>&nbsp;
+                            <% } %>
                         </div>
                         <div class="col-md-3">
                             <p class="btn pull-right  btn_content_style" href="#" role="button">阅读全文 &gt;</p>
@@ -38,62 +34,7 @@
                     </div>
 
                 </li>
-                <li class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="./img/01.jpg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <a href="problem_content.html">
-                            <h3 class="media-heading  media-heading">MAC 下解决端口占用的问题</h3>
-                            <h5 class="main_date">·&nbsp; 2018年05月22日</h5>
-                            <p class="letterspacing">终端输入：sudo lsof -i tcp:port 将port换成被占用的端口(如：8086、9998)
-                                将会出现占用端口的进程信...</p>
-                        </a>
-                    </div>
-                    <hr class="split">
-                    <div>
-                        <div class="col-md-9 tags">
-                            <a href="#">
-                                <i class="fa fa-tags" aria-hidden="true"></i>&nbsp;HTML</a>&nbsp;
-                            <a href="#">
-                                <i class="fa fa-tags" aria-hidden="true"></i>&nbsp;CSS</a>
-                        </div>
-                        <div class="col-md-3">
-                            <p class="btn pull-right  btn_content_style" href="#" role="button">阅读全文 &gt;</p>
-                        </div>
-                    </div>
-
-                </li>
-                <li class="media">
-                    <div class="media-left">
-                        <a href="#">
-                            <img class="media-object" src="./img/02.jpeg" alt="...">
-                        </a>
-                    </div>
-                    <div class="media-body">
-                        <a href="#">
-                            <h3 class="media-heading  media-heading">史上最全的Webstorm快捷键及技巧</h3>
-                            <h5 class="main_date">·&nbsp; 2018年05月22日</h5>
-                            <p class="letterspacing"> Webstorm是一款前端开发神器，此文介绍webstorm的快捷键和技巧分享。
-                                所谓工欲善其事，必先利其器嘛，想着如果要提高开发效率，那掌握一些常用的快捷键应该是少不了的，所以把webstorm快捷键及技巧分享给大家。持续更新中...</p>
-                        </a>
-                    </div>
-                    <hr class="split">
-                    <div>
-                        <div class="col-md-9 tags">
-                            <a href="#">
-                                <i class="fa fa-tags" aria-hidden="true"></i>&nbsp;HTML</a>&nbsp;
-                            <a href="#">
-                                <i class="fa fa-tags" aria-hidden="true"></i>&nbsp;CSS</a>
-                        </div>
-                        <div class="col-md-3">
-                            <p class="btn pull-right  btn_content_style" href="#" role="button">阅读全文 &gt;</p>
-                        </div>
-                    </div>
-                </li>
-
+                <% } %>
             </ul>
             <!-- 分页的实现 -->
 

@@ -1,14 +1,51 @@
 var express = require('express');
 var router = express.Router();
+var blogDao = require('../dao/blogDao');
+var Q = require('q');
+var result;
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-    res.render('index', {title: 'Express'});
+    result = {
+        articles: [],
+        tags: [],
+        archives: [],
+        totalPage: '',
+        currentPage: ''
+    };
+    blogDao.getBlogs(req.query) // promise.resovle参数会向下继续传递,作为.then()执行时的参数,且仅能传递一个值,如想传递多值则用数组[params1,params2]
+        .then(fun1)
+        .then(function (results) {
+            result.articles = results[0];
+            res.render('index', result);
+        })
 });
 
+var fun1 = function (result) {
+    var data = '123';
+    var deferred = Q.defer();
+    deferred.resolve([result, data]);
+    return deferred.promise;
+};
+
 /* GET admin page. */
-router.get('/about', function (req, res, next) {
-    res.render('about', {title: 'Express'});
+router.get('/article/:id', function (req, res, next) {
+    result = {
+        title: '',
+        archives: '',
+        tags: [],
+        description: '',
+        content: ''
+    };
+    blogDao.getBlog(req.params.id)
+        .then(function (results) {
+            result.title = results.title;
+            result.archives = results.archives;
+            result.tags = results.title;
+            result.description = results.description;
+            result.content = results.content;
+            res.render('front/front_content', result);
+        });
 });
 
 /* GET persoanl page. */
@@ -35,6 +72,5 @@ router.get('/problem_list', function (req, res, next) {
 router.get('/problem_content', function (req, res, next) {
     res.render('problem/problem_content');
 });
-
 
 module.exports = router;
