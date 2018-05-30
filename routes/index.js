@@ -35,15 +35,18 @@ router.get('/article/:id', function (req, res, next) {
         archives: '',
         tags: [],
         description: '',
-        content: ''
+        content: '',
+        updateTime:''
     };
     blogDao.getBlog(req.params.id)
         .then(function (results) {
-            result.title = results.title;
-            result.archives = results.archives;
-            result.tags = results.title;
-            result.description = results.description;
-            result.content = results.content;
+            result.title = results[0].title;
+            result.archives = results[0].archive;
+            result.tags = results[0].tags;
+            result.description = results[0].description;
+            result.content = results[0].content;
+            result.updateTime=results[0].updateTime;
+            console.log(results)
             res.render('front/front_content', result);
         });
 });
