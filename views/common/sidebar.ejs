@@ -45,11 +45,9 @@
         <h3 class="line">
             <b>标签</b>
         </h3>
-        <a class="btn btn-default btn_style" href="#" role="button">HTML</a>
-        <a class="btn btn-default btn_style" href="#" role="button">CSS</a>
-        <a class="btn btn-default btn_style" href="#" role="button">JavaScript</a>
-        <a class="btn btn-default btn_style" href="#" role="button">组件</a>
-        <a class="btn btn-default btn_style" href="#" role="button">总结</a>
+        <% for(var i = 0;i < tags.length;i++){ %>
+        <a class="btn btn-default btn_style" href="#" role="button"><%= tags[i].tagName %></a>
+        <% } %>
     </div>
 </div>
 <!-- col-md-4 -->
