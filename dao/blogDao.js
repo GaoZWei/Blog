@@ -19,6 +19,7 @@ function getBlogs(params) {
             ',GROUP_CONCAT(DISTINCT ach.archiveName SEPARATOR ",") as archive ' +
             'from Article a left join Tag t on t.articleId = a.id ' +
             'left join Archive ach on ach.articleId = a.id GROUP BY a.id';
+
         var sql1 = 'SELECT * from (' + sql + ') tmp where tags like "%' + tag + '%"';
         var sql2 = 'SELECT * from (' + sql + ') tmp where archive like "%' + archive + '%"';
 
@@ -56,9 +57,17 @@ function getBlogs(params) {
  */
 function getBlog(id) {
     return new Promise(function (resolve, reject) {
-        var sql = 'select * from Article where id=?';
+        var sql = 'SELECT a.* ,GROUP_CONCAT(t.tagName SEPARATOR ",") as tags ' +
+            ',GROUP_CONCAT(DISTINCT ach.archiveName SEPARATOR ",") as archive ' +
+            'from Article a left join Tag t on t.articleId = a.id ' +
+            'left join Archive ach on ach.articleId = a.id where id=? GROUP BY a.id';
         pool.query(sql, [id], function (error, results) {
             if (!error) {
+                console.log(results)
+                results[0].updateTime = moment(results[0].updateTime).format('YYYY年MM月DD日');
+                if(results[0].tags!=null){
+                    results[0].tags = results[0].tags.toString().split(',');
+                }
                 resolve(results);
             } else {
                 reject(error);
@@ -87,6 +96,7 @@ function createBlog(params) {
                             for (var i = 0; i < params.tag.length; i++) {
                                 pool.query(sql4, [params.tag[i], id], function (error, results) {
                                     if (!error) {
+
                                         resolve(results);
                                     } else {
                                         reject(error);
