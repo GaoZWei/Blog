@@ -41,7 +41,7 @@ function getBlogs(params) {
                     results[i].updateTime = moment(results[i].updateTime).format('YYYY年MM月DD日');
                     results[i].tags = results[i].tags.toString().split(',');
                 }
-                console.log(results);
+                // console.log(results);
                 resolve(results);
             } else {
                 reject(error);

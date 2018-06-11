@@ -16,10 +16,11 @@ router.get('/', function (req, res, next) {
     };
     blogDao.getBlogs(req.query) // promise.resovle参数会向下继续传递,作为.then()执行时的参数,且仅能传递一个值,如想传递多值则用数组[params1,params2]
         .then(commonDao.getTags) // 获取标签
+        .then(commonDao.getSorts)//获取分类
         .then(function (results) {
-            console.log(results);
-            result.articles = results[0];
-            result.tags = results[1];
+            result.articles = results[1][1];
+            result.tags = results[1][0];
+            result.archives=results[0];
             res.render('index', result);
         })
 });

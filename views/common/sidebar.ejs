@@ -37,6 +37,12 @@
             <a href="#" class="list-group-item">常用组件
                 <span class="badge"></span>
             </a>
+            <% for (var i=0;i< archives.length;i++){%>
+                <a href="/?archive=<%=archives[i].archiveName%>" class="list-group-item ">
+                   <%=archives[i].archiveName%>
+                    <span class="badge">1</span>
+                </a>
+            <% } %>
         </div>
     </div>
 
@@ -46,7 +52,7 @@
             <b>标签</b>
         </h3>
         <% for(var i = 0;i < tags.length;i++){ %>
-        <a class="btn btn-default btn_style" href="#" role="button"><%= tags[i].tagName %></a>
+        <a class="btn btn-default btn_style" href="/?tag=<%= tags[i].tagName %>" role="button"><%= tags[i].tagName %></a>
         <% } %>
     </div>
 </div>
